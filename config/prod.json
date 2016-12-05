@@ -1,0 +1,8 @@
+{
+    "logger": {
+        "name": "poverty-calculator",
+        "level": "warn",
+        "toFile": false,
+        "dirLogFile": null
+    }
+}

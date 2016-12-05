@@ -1,0 +1,16 @@
+develop:
+  extends:
+    file: base.yml
+    service: base
+  ports:
+    - "35731:35729"
+  container_name: poverty-calculator-develop
+  environment:
+    NODE_ENV: dev
+    CT_URL: http://mymachine:9000
+    LOCAL_URL: http://mymachine:4900
+    POVERTY_SERVICE_URL: http://iresearch.worldbank.org/PovcalNet/PovcalNetAPI.ashx
+    DEBUG: "*"
+  command: develop
+  volumes:
+    - ./app:/opt/poverty_calculator/app

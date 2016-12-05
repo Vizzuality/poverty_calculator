@@ -1,0 +1,8 @@
+{
+    "logger": {
+        "name": "poverty-calculator-TEST",
+        "level": "debug",
+        "toFile": false,
+        "dirLogFile": null
+    }
+}

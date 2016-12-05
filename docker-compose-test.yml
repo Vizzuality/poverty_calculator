@@ -1,0 +1,10 @@
+test:
+  extends:
+    file: base.yml
+    service: base
+  ports:
+    - "4900"
+  container_name: poverty-calculator-test
+  environment:
+    NODE_ENV: test
+  command: test

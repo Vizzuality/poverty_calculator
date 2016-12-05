@@ -1,0 +1,8 @@
+{
+    "poverty":{
+        "serviceUrl": "POVERTY_SERVICE_URL"
+    },
+    "service": {
+        "port": "PORT"
+    }
+}

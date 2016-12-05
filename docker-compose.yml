@@ -1,0 +1,13 @@
+prod:
+  image: vizzuality/poverty-calculator:1.0.0${STAGING}
+  ports:
+    - "4900"
+  env_file:
+    - prod.env
+  command: start
+  dns: ${DNS_SERVER}
+  restart: always
+  log_driver: "syslog"
+  log_opt:
+      syslog-address: ${SYSLOG_ADDRESS}
+      tag: poverty-calculator${STAGING}

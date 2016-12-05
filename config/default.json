@@ -1,0 +1,13 @@
+{
+    "logger": {
+        "name": "poverty-calculator-DEV",
+        "level": "debug",
+        "toFile": false,
+        "dirLogFile": null
+    },
+    "service": {
+        "name": "Poverty Calculator API",
+        "uri": "http://mymachine:4900",
+        "port": 4900
+    }
+}
