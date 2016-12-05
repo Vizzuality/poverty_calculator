@@ -2,18 +2,11 @@
 
 class PovertyQueryNotValid extends Error{
 
-    constructor(messages){
-        super(messages);
+    constructor(message){
+        super(message);
         this.name = 'PovertyQueryNotValid';
-        this.messages = messages;
+        this.message = message;
     }
-
-    getMessages(){
-        var messages = '- ';
-        this.messages.forEach(function(message){
-            messages += Object.keys(message)[0] + ': ' + message[Object.keys(message)[0]] + ' - ';
-        });
-        return messages;
-    }
+    
 }
 module.exports = PovertyQueryNotValid;

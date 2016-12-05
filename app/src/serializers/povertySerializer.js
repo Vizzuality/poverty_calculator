@@ -20,7 +20,7 @@ class PovertySerializer {
                 id: 'undefined',
                 type: 'poverty',
                 attributes:{
-                    poverty: data.poverty
+                    poverty: data
                 }
             };
         }
