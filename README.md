@@ -9,11 +9,12 @@ This repository implements the Poverty Calculator Service
 
 ```
 GET: /poverty/:country
-
 ```
 
 "country" -> url param must be ISO coded
+
 "povertyLine" -> this attribute is required and it's mandatory to include it in the QueryParam.
+
 "years" -> (optional) filter the query by years (if it's not set, the default value is years from 2010 to 2015 both included)
 
 ### CRUD Examples
