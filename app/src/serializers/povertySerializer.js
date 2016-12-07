@@ -20,7 +20,8 @@ class PovertySerializer {
                 id: 'undefined',
                 type: 'poverty',
                 attributes:{
-                    poverty: data
+                    mean: data.mean,
+                    povertyGap: data.povertyGap
                 }
             };
         }

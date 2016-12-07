@@ -22,6 +22,17 @@ class PovertyService {
         return promise;
     }
 
+    static estimateIndicator(elements, indicator){
+        logger.info('Estimating Poverty Value');
+        let indicatorDistribution = elements.map(function(el){
+            return el[indicator];
+        });
+        let estimation = indicatorDistribution.reduce(function(a,b){
+            return a+b;
+        })/indicatorDistribution.length;
+        return estimation;
+    }
+
     static * get(country, filter){
         let povertyLine = filter.povertyLine;
         let years = filter.years;
@@ -37,7 +48,11 @@ class PovertyService {
         try{
             let poverty = rawPoverty.split('{PovResult:[')[1];
             poverty = '[' + poverty.substring(0, poverty.length-2).trim().replaceAll('\'','\"') + ']';
-            return JSON.parse(poverty);
+            poverty = JSON.parse(poverty);
+            return {
+                mean: PovertyService.estimateIndicator(poverty, 'Mean'),
+                povertyGap: PovertyService.estimateIndicator(poverty, 'pg')
+            };
         }
         catch(err){
             logger.error('Error forming response');

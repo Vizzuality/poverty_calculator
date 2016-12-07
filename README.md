@@ -17,7 +17,7 @@ GET: /poverty/:country
 
 "years" -> (optional) filter the query by years (if it's not set, the default value is years from 2010 to 2015 both included)
 
-### CRUD Examples
+### Examples
 
 #### Getting
 
@@ -26,6 +26,12 @@ GET: /poverty/BRA?povertyLine=1.0
 GET: /poverty/AUT?povertyLine=2.0&years=2010
 GET: /poverty/BEL?povertyLine=1.5&years=2010,2011,2012,2013,2014,2015
 ```
+
+#### Returns
+
+"mean": the average monthly per capita income($)/consumption expenditure
+
+"povertyGap": the mean distance below the poverty line as a proportion of the poverty line.
 
 #### Next Endpoints -> Some Countries, povertyLine interval, PPP param...
 
