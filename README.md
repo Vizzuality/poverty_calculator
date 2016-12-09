@@ -1,6 +1,6 @@
 # Poverty Calculator Microservice
 
-This repository implements the Poverty Calculator Service
+This repository implements the Poverty Calculator Service 
 
 ## Quick Overview
 
